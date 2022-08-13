@@ -1,7 +1,7 @@
 {
   "name": "WifiController",
-  "version": "1.0",
-  "description": "Library allowing WiFi connection and provides secure WiFi client",
+  "version": "1.1",
+  "description": "Basic WiFi functionality, allows certificate setting for ssl connections",
   "keywords": "WifiController",
   "repository": {
     "type": "git",

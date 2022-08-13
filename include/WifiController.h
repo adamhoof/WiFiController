@@ -6,7 +6,6 @@
 class WifiController
 {
 private:
-    WiFiClientSecure wifiClientSecure {};
     String hostname;
     String ssid;
     String password;
@@ -16,9 +15,8 @@ private:
 public:
     WifiController();
 
-    WiFiClientSecure& wiFiClientSecure();
-
-    void setCertificates(const char* ca_cert, const char* client_cert, const char* client_key);
+    void setCertificates(WiFiClientSecure& wiFiClientSecure, const char* ca_cert, const char* client_cert,
+                         const char* client_key);
 
     WifiController& setHostname(const String& hostname);
 
