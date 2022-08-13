@@ -1,6 +1,6 @@
 {
   "name": "WifiController",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Basic WiFi functionality, allows certificate setting for ssl connections",
   "keywords": "WifiController",
   "repository": {
@@ -13,5 +13,20 @@
   },
   "license": "MIT",
   "frameworks": "arduino",
-  "platforms": "espressif32"
+  "platforms": "espressif32",
+
+  "examples": [
+    {
+      "name": "BasicFunctionality",
+      "base": "examples/Basic",
+      "files": [
+        "Basic.cpp"
+      ]
+    },
+    {
+      "name": "SetSSLCertificates",
+      "base": "examples/SetSSLCertificates",
+      "files": ["SetSSLCertificates.cpp"]
+    }
+  ]
 }
