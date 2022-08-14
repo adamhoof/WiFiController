@@ -14,7 +14,6 @@
   "license": "MIT",
   "frameworks": "arduino",
   "platforms": "espressif32",
-
   "examples": [
     {
       "name": "BasicFunctionality",
@@ -26,7 +25,9 @@
     {
       "name": "SetSSLCertificates",
       "base": "examples/SetSSLCertificates",
-      "files": ["SetSSLCertificates.cpp"]
+      "files": [
+        "SetSSLCertificates.cpp"
+      ]
     }
   ]
 }
