@@ -1,6 +1,6 @@
 {
   "name": "WifiController",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Basic WiFi functionality, allows certificate setting for ssl connections",
   "keywords": "WifiController",
   "repository": {
@@ -26,8 +26,7 @@
       "name": "SetSSLCertificates",
       "base": "examples/SetSSLCertificates",
       "files": [
-        "SetSSLCertificates.cpp",
-        "certificates.h"
+        "SetSSLCertificates.cpp"
       ]
     }
   ]
