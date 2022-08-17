@@ -16,9 +16,11 @@ void WifiController::setTimeForCertValidation()
     gmtime_r(&now, &timeInfo);
 }
 
-void WifiController::setCertificates(WiFiClientSecure &wiFiClientSecure, const char* ca_cert, const char* client_cert, const char* client_key)
+void WifiController::setCertificates(WiFiClientSecure &wiFiClientSecure, const char* ca_cert, const char* client_cert, const char* client_key, bool autoSetTime)
 {
-    setTimeForCertValidation();
+    if (autoSetTime) {
+        setTimeForCertValidation();
+    }
 
     wiFiClientSecure.setCACert(ca_cert);
     wiFiClientSecure.setCertificate(client_cert);

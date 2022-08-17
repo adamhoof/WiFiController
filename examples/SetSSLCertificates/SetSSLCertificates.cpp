@@ -34,8 +34,10 @@ MIfdaho855fdsa8.........
 
 void setup() {
     wifiController.setHostname(hostname).setSSID(wifiSSID).setPassword(wifiPassword);
+
+    //if you want the time for certificate validation be automatically set for you, pass in true, to set time manually in your own code, pass false
+    wifiController.setCertificates(&wiFiClientSecure, CA_CERT, CLIENT_CERT, CLIENT_KEY, true);
     wifiController.connect();
-    wifiController.setCertificates(&wiFiClientSecure, CA_CERT, CLIENT_CERT, CLIENT_KEY);
 }
 
 void loop() {

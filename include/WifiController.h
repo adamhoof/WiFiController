@@ -16,7 +16,7 @@ public:
     WifiController();
 
     void setCertificates(WiFiClientSecure& wiFiClientSecure, const char* ca_cert, const char* client_cert,
-                         const char* client_key);
+                         const char* client_key, bool autoSetTime);
 
     WifiController& setHostname(const String& hostname);
 
