@@ -6,9 +6,9 @@
 class WifiController
 {
 private:
-    String hostname;
-    String ssid;
-    String password;
+    const char* hostname;
+    const char* ssid;
+    const char* password;
 
     void setTimeForCertValidation();
 
@@ -18,7 +18,7 @@ public:
     void setCertificates(WiFiClientSecure& wiFiClientSecure, const char* ca_cert, const char* client_cert,
                          const char* client_key, bool autoSetTime);
 
-    WifiController& setHostname(const String& hostname);
+    WifiController& setHostname(const char* hostname);
 
     WifiController& setSSID(const char* ssid);
 

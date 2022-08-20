@@ -27,7 +27,7 @@ void WifiController::setCertificates(WiFiClientSecure &wiFiClientSecure, const c
     wiFiClientSecure.setPrivateKey(client_key);
 }
 
-WifiController& WifiController::setHostname(const String& hostname)
+WifiController& WifiController::setHostname(const char* hostname)
 {
     this->hostname = hostname;
     return *this;
@@ -49,9 +49,9 @@ void WifiController::connect()
 {
     WiFiClass::mode(WIFI_STA);
     WiFi.config(INADDR_NONE, INADDR_NONE, INADDR_NONE, INADDR_NONE);
-    WiFiClass::setHostname(hostname.c_str());
+    tcpip_adapter_set_hostname(TCPIP_ADAPTER_IF_STA, hostname);
 
-    WiFi.begin(ssid.c_str(), password.c_str());
+    WiFi.begin(ssid, password);
     Serial.println("Connecting to Wi-Fi");
     if (WiFi.waitForConnectResult() != WL_CONNECTED) {
         ESP.restart();
